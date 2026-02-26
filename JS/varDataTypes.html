@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Value Types in JS</title>
+</head>
+<body>
+    <script>
+        //JS Dataa Value Types
+        //Primitive immutable single value data types in JS 
+        //String , Number, Boolean, Undefined, Null, Bigint and Symbol
+
+        //String
+        var myName="Shubham Saini";
+        console.log(myName);
+        var myMob=202093958;
+        console.log(myMob);
+        console.log(myName+ "Mobile number is" +myMob);
+        //Boolean
+        var ismarried=false;
+        console.log(myName + "is married?"+ismarried);
+        //null
+        var myAddress=null;
+        console.log(myAddress);
+        console.log(typeof(myAddress)); 
+        var myNum=BigInt(245329683948595069045034374683468);
+        console.log(myNum);
+        console.log(typeof(myNum));
+        //symbol
+        var var1=Symbol("Shubham");
+        var var2=Symbol("Shubham");
+        console.log(var1==var2); //false because symbol is unique and immutable
+        //Reference Type(Object)--mutable in memory and keep the data in key value pair
+        //object{},function(),array[]
+        let myInfo={
+    name:"Shubham Saini",
+    age:23,
+    isMarried:false,
+    address:"Meerut",
+    Branch:"cse",
+    section:23
+        };
+        console.log(myInfo);
+        console.log(myInfo.name + myInfo.age);
+        //object length
+        var keys=Object.keys(myInfo);
+        console.log(keys.length);
+          //function-block of code to perform particular task
+          function cal(){
+            var num1=10;
+            var num2=20;
+            var add=num1+num2;
+            console.log("Addition of numbers is" + add);
+
+          }
+          cal();
+          //Array-collection of any data types
+          let studentlist=["Shubham","Saini","jaiswal"];
+          console.log(studentlist);
+          //for different data types in array
+          let stdata=[23,"Shubham",true,null,undefined];
+          console.log(stdata);
+          console.log(stdata.length);
+          //to itterate array number
+          for(let i=0; i<stdata.length;i++)
+          {
+            console.log(stdata[i]);
+          }
+          for(let x in stdata){
+            console.log("updated way" + stdata[x]);
+          }
+
+
+    </script>
+</body>
+</html>
