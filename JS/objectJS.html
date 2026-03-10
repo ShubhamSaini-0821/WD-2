@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Object in JS
+        //object is a collection of key keys(properties) and values
+        //create object using object literal
+        let student={
+            name:"Shubham Saini",
+            age:23,
+            isMarried:false,
+            address:{
+                city:"Meerut",
+                state:"Uttar Pradesh",
+                country:"India"
+            },
+            education:["10th","12th","B.Tech"],
+            degree:"B.Tech",
+            Branch:"cse",
+            section:23,
+            getInfo:function(){
+                return "my current education is"+student.degree;
+            }
+        };
+        console.log(student);
+        console.log(typeof(student));
+        //accessing object properties
+        console.log(student.getinfo());//function
+        console.log(student.address.city);//object
+        console.log(student.education[2]);//array
+        //find keys in object
+        console.log(name in student);//true
+        console.log(student.hasOwnProperty("name"));//true
+       //delete keys from object
+       console.log(delete student.name)
+         console.log(student);
+         //find length of object
+         let keyslength=Object.keys(student);
+            console.log(keyslength.length);
+            //iterate keys of object
+            for(let i=0; i<keyslength.length; i++){
+                console.log(student[keyslength[i]]);
+            }
+            //iterate keys of object using for in loop
+            for(let key in student){
+                console.log(student[key]);
+            }
+            //create object using new keyword
+            let myInfo=new Object();
+            myInfo.name="Shubham Saini";
+            myInfo.age=23;
+            myInfo.isMarried=false;
+            console.log(myInfo.name); //dot notation
+            console.log(myInfo["age"]);//bracket notation
+            console.log(myInfo["isMarried"]);//bracket notation
+    </script>
+</body>
+</html>
