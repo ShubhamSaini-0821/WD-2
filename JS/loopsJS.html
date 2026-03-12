@@ -6,6 +6,45 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        //Javascript provides different types of loops to perform repetitive tasks
+        //types of loops in JS
+        let studentList=["Shubham","Saini","Jaiswal","shubho"];
+        let studentList2=[["sanvi",23],["vinay",25]];
+        //for loop
+        for(let i=0; i<studentList.length; i++){
+            console.log(studentList[i]);
+        }
+        //for of loop
+        for(let student of studentList){
+            console.log(student);
+        }
+        //for in loop
+        for(let index in studentList){
+            console.log(studentList[index]);
+        }
+        //while loop
+        let i=0;
+        while(i<studentList.length){
+            console.log(studentList[i]);
+            i++;
+        }
+        //do while loop
+        let j=0;
+        do{
+            console.log(studentList[j]);
+            j++;
+        }while(j<studentList.length);
+        //nested loop
+        for(let i=0; i<studentList2.length; i++){
+            for(let j=0; j<studentList2[i].length; j++){
+                console.log(studentList2[i][j]);
+            }
+        };
+        //for each loop
+        studentList.forEach(function(student){
+            console.log(student);
+        });
+        </script>
 </body>
 </html>
