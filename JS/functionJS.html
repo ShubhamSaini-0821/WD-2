@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //functions are reusable blocks of code that perform a specific task.
+        //Types of functions in JS
+        //normal function:- with para,without para and with default
+        //normal function without parameter
+        function demo(){
+            console.log("Hello JS");
+        }
+        demo();//function calling
+        //normal function with parameter
+        function demo2(text){
+            console.log("Hello "+text);
+        }
+        demo2("React");
+        //normal function with default parameter
+        function add(a,b=10){
+            console.log("Addition is " + (a+b));
+        }
+        add(123); 
+        //syncronous function 
+        function cal(x,y){
+            function add(a,b){
+                console.log("Addition is " + (a+b));
+            }
+        }
+        function multiply(a,b){
+            console.log("Multiplication is " + (a*b));
+        }
+        function subtract(a,b){
+            console.log("Subtraction is " + (a-b));
+        }
+        add(3,5);
+        multiply(3,6);
+        subtract(6,5);
+        //Anonymous function:- A function without a name, often used as a callback or assigned to a variable.
+        let msg=function(){
+            console.log("Hello Anonymous Function");
+          //  console.log(typeof(msg));
+        }
+        msg();
+        //short code for above function is arrow function
+        let msg1=()=>(console.log("Hello Arrow Function"));
+        msg1();
+        //arrow function using multiple lines
+        let msg2=(a,b)=>{
+            var num1=a;
+            var num2=b;
+            var res=num1/num2;
+            console.log("Result is " + res);
+        }
+        msg2(10,20);
+        //IIFE(Immediately Invoked Function Expression):- A function that is defined and executed immediately,
+        //  often used to create a local scope and avoid polluting the global namespace.
+        (function(){
+            console.log("Hello");
+        })();
+        //short code for above function
+        (msg=>console.log("Hello"))();
+        //promises:- A promise is an object that represents the eventual completion (or failure) 
+        // of an asynchronous operation and its resulting value.
+       let myPromise=new Promise(function(resolve,reject){
+        let age=12;
+        if(age>=18)
+        {
+            resolve("You are eligible to vote");
+        }
+        else{
+            reject("You are not eligible to vote");
+        }
+       });
+         myPromise.then(msg=>console.log(msg)).catch(err=>console.log(err));
+         //async/await:- A syntax for working with promises that allows you 
+         // to write asynchronous code in a more synchronous and readable manner.
+         //api....'https://dummyjson.com/products'
+        async function userInfo(){
+            try{
+            let userData=await fetch('https://dummyjson.com/products');
+            let response=await userData.json();
+            console.log(response);
+            }//try end
+            catch(err){
+                console.log(err);
+            }//catch end
+        }//function end
+        userInfo();
+        //Higher-order functions:- A higher-order function is a function that takes one or more functions as arguments,
+        //map() is a higher-order function that creates a new array by 
+        // applying a provided function to each element of the original array.
+        //filter() is a higher-order function that creates a new array with all elements
+        //  that pass a test implemented by the provided function.
+        //reduce() is a higher-order function that applies a provided function against
+        //  an accumulator and each element in the array (from left to right) to reduce it to a single value.
+        //forEach() is a higher-order function that executes a provided function once for each array element.
+          let num=[4,5,6,7,5,3,2,1];
+          //map
+            let mapResult=num.map(x=>x*2);
+            console.log("Map Result is " + mapResult);
+            //filter
+            let filterResult=num.filter(x=>x%2==0);
+            console.log("Filter Result is " + filterResult);
+            //reduce
+            let reduceResult=num.reduce((acc,curr)=>acc+curr,0);
+            console.log("Reduce Result is " + reduceResult);
+                //forEach
+                console.log("ForEach Result is ");
+                num.forEach(x=>console.log(x*2));
+          //local storage:- Local storage is a web storage mechanism that
+         // allows you to store key-value pairs in a web browser with no expiration date.
+        let myInfo={
+            name:"Shubham",
+            age:22,
+            city:"Meerut",
+            address:{
+                state:"UP",
+                country:"India"
+            }
+        };
+        //Store the object by converting it to a JSON string
+        localStorage.setItem("myInfo",JSON.stringify(myInfo));
+        //Retrieve the object and parse it back to a JavaScript object
+        let storeData=JSON.parse(localStorage.getItem("myInfo"))
+        console.log(storeData);
+    </script>
+    </body>
+    </html>
