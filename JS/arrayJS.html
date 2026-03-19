@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array in JS</title>
+</head>
+<body>
+    <script>
+        //Array in JS
+        //Array is a data structure that can hold multiple values of different types.
+        //create array using array literal
+        let studentList=["Shubham","Saini","Jaiswal","shubho"];
+        console.log(studentList);
+        console.log(typeof(studentList));
+        console.log(studentList.lastIndexOf("shubho"));//3
+        console.log(studentList.length);//4
+        console.log(studentList.pop());//shubho
+        console.log("Updated array is "+ studentList.length);//3
+        console.log(studentList.push("kamboj"));//4
+        console.log("Updated array is "+ studentList.length);//4
+        //shift and unshift method
+        console.log(studentList.shift());
+        console.log(`Updated array after shift is ${studentList}`);
+        //accessing array elements
+        console.log(studentList[0]);//Shubham
+        console.log(studentList[1]);//Saini
+        console.log(studentList[2]);//Jaiswal
+        console.log(studentList[3]);//shubho
+        //array methods
+        //push() method adds an element to the end of the array
+        studentList.push("sanvi");
+        console.log(studentList);
+        //pop() method removes the last element from the array
+        studentList.pop();
+        console.log(studentList);
+        //shift() method removes the first element from the array
+        studentList.shift();
+        console.log(studentList);
+        //unshift() method adds an element to the beginning of the array
+        studentList.unshift("Shubham");
+        console.log(studentList);
+        </script>
+</body>
+</html>
