@@ -30,11 +30,11 @@
         console.log(student);
         console.log(typeof(student));
         //accessing object properties
-        console.log(student.getinfo());//function
+        console.log(student.getInfo());//function
         console.log(student.address.city);//object
         console.log(student.education[2]);//array
         //find keys in object
-        console.log(name in student);//true
+        console.log("name" in student);//true
         console.log(student.hasOwnProperty("name"));//true
        //delete keys from object
        console.log(delete student.name)
@@ -44,7 +44,7 @@
             console.log(keyslength.length);
             //iterate keys of object
             for(let i=0; i<keyslength.length; i++){
-                console.log(student[keyslength[i]]);
+                console.log(keyslength[i]);
             }
             //iterate keys of object using for in loop
             for(let key in student){

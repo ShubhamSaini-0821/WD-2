@@ -21,11 +21,12 @@
         }
         demo2("React");
         //normal function with default parameter
-        function add(a,b=10){
-            console.log("Addition is " + (a+b));
+        function add(a,b,c){
+            console.log("Addition is " + (a+b+c));
         }
-        add(123); 
-        //syncronous function 
+        add(123,20,30); 
+        //syncronous function:- A synchronous function is a function 
+        // that executes in a sequential manner
         function cal(x,y){
             function add(a,b){
                 console.log("Addition is " + (a+b));
@@ -43,7 +44,7 @@
         //Anonymous function:- A function without a name, often used as a callback or assigned to a variable.
         let msg=function(){
             console.log("Hello Anonymous Function");
-          //  console.log(typeof(msg));
+          // console.log(typeof(msg));
         }
         msg();
         //short code for above function is arrow function
@@ -76,6 +77,7 @@
             reject("You are not eligible to vote");
         }
        });
+       console.log(myPromise);
          myPromise.then(msg=>console.log(msg)).catch(err=>console.log(err));
          //async/await:- A syntax for working with promises that allows you 
          // to write asynchronous code in a more synchronous and readable manner.

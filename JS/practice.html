@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let stdata={
+            name:"Shubham",
+            age:23,
+            city:"Delhi",
+            education:["BCA","MCA","MBA"]
+        }
+        let a=Object.keys(stdata);
+            console.log(a);
+            console.log(a.length);
+        for(let i=0; i<a.length; i++){
+             console.log(a[i]);
+           }
+           //for of loop-it iterates over the values of an array
+           for(let edu of stdata.education){
+             console.log("updated way " + edu);
+           }
+           //for loop-it iterates over the index of an array
+           for(let i in stdata){
+             console.log("updated " + stdata[i]);
+           }
+           //for in loop-it iterates over the properties of 
+          // an object and returns the index of the array
+          for(let x in stdata){
+            console.log("  " + stdata[x]);
+          }
+          function cal(){
+            let num1=10;
+            let num2=20;
+            let add=num1+num2;
+            console.log("updated way " + add);
+            }
+            cal();
+    </script>
+</body>
+</html>
